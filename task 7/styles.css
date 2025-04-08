@@ -1,0 +1,110 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f7fa;
+  padding: 20px;
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+input, select {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+thead {
+  background-color: #3498db;
+  color: white;
+}
+
+.form-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.preview-container {
+  margin-top: 30px;
+  padding: 20px;
+  border: 2px dashed #3498db;
+  border-radius: 12px;
+  background: #fafafa;
+}
+
+.paid-note {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.thank-you {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: #444;
+}
+
+.search-section {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+#searchResults {
+  margin-top: 15px;
+  background: #eef6fb;
+  padding: 10px;
+  border-left: 4px solid #3498db;
+  border-radius: 8px;
+}

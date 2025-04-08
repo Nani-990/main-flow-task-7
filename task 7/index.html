@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bill Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Bill Generator</h1>
+
+    <!-- Buyer Details -->
+    <div class="form-section">
+      <label>Buyer Name: <input type="text" id="buyerName"></label>
+      <label>Address: <input type="text" id="buyerAddress"></label>
+      <label>Contact: <input type="text" id="buyerContact"></label>
+      <label>Email: <input type="email" id="buyerEmail"></label>
+    </div>
+
+    <!-- Transaction Details -->
+    <div class="form-section">
+      <label>Transaction ID: <input type="text" id="transactionId"></label>
+      <label>Purchase Date: <input type="date" id="purchaseDate"></label>
+      <label>Payment Method:
+        <select id="paymentMethod">
+          <option value="Cash">Cash</option>
+          <option value="Card">Card</option>
+          <option value="UPI">UPI</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- Product Table -->
+    <button onclick="addProduct()">➕ Add Product</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Qty</th>
+          <th>Unit Price</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="productBody"></tbody>
+    </table>
+
+    <!-- Totals -->
+    <div class="form-section">
+      <label>Subtotal: ₹<span id="subtotal">0.00</span></label>
+      <label>Total Amount: ₹<span id="total">0.00</span></label>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="form-section">
+      <button onclick="previewBill()">👁️ Preview Bill</button>
+      <button onclick="printBill()">🖨️ Print</button>
+      <button onclick="downloadPDF()">📥 Download PDF</button>
+      <button onclick="saveBill()">💾 Save Bill</button>
+    </div>
+
+    <!-- Preview Container -->
+    <div id="billPreview"></div>
+
+    <!-- Search Section -->
+    <div class="search-section">
+      <input type="text" id="searchInput" placeholder="Enter Transaction ID">
+      <button onclick="searchBill()">🔍 Search Bill</button>
+    </div>
+    <div id="searchResults"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
